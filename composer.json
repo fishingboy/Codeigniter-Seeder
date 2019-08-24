@@ -1,0 +1,16 @@
+{
+    "name": "fishingboy/codeigniter-seeder",
+    "description": "Codeigniter Seeder",
+    "authors": [
+        {
+            "name": "fishingboy",
+            "email": "et282523@hotmail.com"
+        }
+    ],
+    "version": "1.0.0",
+    "autoload": {
+        "psr-4": {
+            "fishingboy\\ci_seeder\\src\\": "/src"
+        }
+    }
+}
