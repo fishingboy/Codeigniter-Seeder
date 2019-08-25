@@ -1,15 +1,16 @@
 # Codeigniter-Seeder
 
 ## 使用方法
-1. 建立 application/controller/Seeder.php
+1. 在 Codeigniter 專案目錄執行 `composer require fishingboy/codeigniter-seeder:^1.0.0`
+2. 建立 application/controller/Seeder.php
     ```
     <?php
     use fishingboy\ci_seeder\CI_Seeder_Controller;
     class Seeder extends CI_Seeder_Controller { }
     ```
-2. 建立 application/seeders 資料夾
+3. 建立 application/seeders 資料夾
 
-3. 建立 application/Sample_seeder.php
+4. 建立 application/Sample_seeder.php
     ```
     <?php
     
@@ -37,7 +38,7 @@
     }
     
     ```
-4. 進入 command line 專案目錄底下，執行 `php index.php seeder`
+5. 進入 command line 專案目錄底下，執行 `php index.php seeder`
     ```
     seeder (資料填充)
     php index.php seeder                   -- 看指令
