@@ -10,7 +10,7 @@
     ```
 3. 建立 application/seeders 資料夾
 
-4. 建立 application/Sample_seeder.php
+4. 建立 application/seeders/Sample_seeder.php
     ```php
     <?php
     
