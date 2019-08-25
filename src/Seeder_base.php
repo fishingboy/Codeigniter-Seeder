@@ -1,4 +1,6 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
+<?php
+
+namespace fishingboy\ci_seeder;
 
 /**
  * 種子的父類別
