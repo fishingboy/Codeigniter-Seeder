@@ -40,6 +40,7 @@
     ```
 5. 進入 command line 專案目錄底下，執行 `php index.php seeder`
     ```
+    $php index.php seeder
     seeder (資料填充)
     php index.php seeder                   -- 看指令
     php index.php seeder run               -- 執行
