@@ -16,7 +16,7 @@
     
     use fishingboy\ci_seeder\CI_Seeder_base;
     
-    class Log_seeder extends CI_Seeder_base
+    class Sample_seeder extends CI_Seeder_base
     {
         /**
          * 執行順序 (大的排前面)
