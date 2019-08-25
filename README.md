@@ -3,7 +3,7 @@
 ## 使用方法
 1. 在 Codeigniter 專案目錄執行 `composer require fishingboy/codeigniter-seeder:^1.0.0`
 2. 建立 application/controller/Seeder.php
-    ```
+    ```php
     <?php
     use fishingboy\ci_seeder\CI_Seeder_Controller;
     class Seeder extends CI_Seeder_Controller { }
@@ -11,7 +11,7 @@
 3. 建立 application/seeders 資料夾
 
 4. 建立 application/Sample_seeder.php
-    ```
+    ```php
     <?php
     
     use fishingboy\ci_seeder\CI_Seeder_base;
