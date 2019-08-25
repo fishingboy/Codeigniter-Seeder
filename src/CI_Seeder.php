@@ -1,9 +1,11 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+
+namespace fishingboy\ci_seeder;
 
 /**
  * Seeder
  */
-class CI_Seeder_Controller extends CI_Controller
+class Seeder extends CI_Seeder_Controller
 {
     /**
      * 換行字元
@@ -25,11 +27,12 @@ class CI_Seeder_Controller extends CI_Controller
         $this->_nl = (is_cli()) ? "\n" : "<br>";
 
         // 限定本機或 Command Line 使用
-        if ( ! is_cli() && 
-            $_SERVER['REMOTE_ADDR'] != '127.0.0.1' && 
+        if ( ! is_cli() &&
+            $_SERVER['REMOTE_ADDR'] != '127.0.0.1' &&
             $_SERVER['REMOTE_ADDR'] != '::1' &&
-            false !== strpos($_SERVER['REMOTE_ADDR'], '192.168.')
-            )
+            false === strpos($_SERVER['REMOTE_ADDR'], '192.168.')
+            && ENVIRONMENT != "development"
+        )
         {
             echo "No Permission !!!";
             exit;
@@ -44,15 +47,17 @@ class CI_Seeder_Controller extends CI_Controller
 
     public function index()
     {
-        $ignore_arr = ['__construct', 'get_instance', 'index', 'findSeeders', 'findOneSeeder'];
-        $method_arr = get_class_methods(__CLASS__);
-        foreach ($method_arr as $method)
-        {
-            if ( ! in_array($method, $ignore_arr))
-            {
-                echo "php index.php {$this->router->class} {$method} {$this->_nl}";
-            }
-        }
+        echo "seeder (資料填充)
+
+php index.php seeder                   -- 看指令
+php index.php seeder run               -- 執行
+php index.php seeder run {seeder_name} -- 執行單一 Seeder
+php index.php seeder ls                -- 看目前 Seeder 的狀態
+
+--
+
+";
+        $this->ls();
     }
 
     /**
@@ -61,21 +66,21 @@ class CI_Seeder_Controller extends CI_Controller
     public function run($seeder_name = "")
     {
         $seeders = $this->findSeeders($seeder_name);
-        foreach ($seeders as  $seeder_name => $seeder_obj) {
+        foreach ($seeders as $seeder_obj) {
             $count = $seeder_obj->run();
+            $seeder_name = get_class($seeder_obj);
             echo "Seed [$seeder_name] 執行完成，建立 $count 筆資料. \n";
         }
     }
 
     /**
      * 顯示種子列表
-     * @return [type] [description]
      */
-    public function list()
+    public function ls()
     {
         $seeders = $this->findSeeders();
         foreach ($seeders as  $seeder_name => $seeder_obj) {
-            echo "php index.php seeder run $seeder_name\n";
+            echo sprintf("php index.php seeder run %s (priority: %3d)\n", str_pad(get_class($seeder_obj), 30), $seeder_obj->priority);
         }
     }
 
@@ -105,6 +110,16 @@ class CI_Seeder_Controller extends CI_Controller
                 $seeders[$class_name] = $seeder_obj;
             }
         }
+
+        // 依優先權排序
+        usort($seeders, function ($a, $b)
+        {
+            if ($a->priority == $b->priority) {
+                return (get_class($a) > get_class($b)) ? 1 : -1;
+            }
+            return  ($a->priority > $b->priority) ? -1 : 1;
+        });
+
         return $seeders;
     }
 
@@ -116,7 +131,7 @@ class CI_Seeder_Controller extends CI_Controller
     private function findOneSeeder($class_name)
     {
         $seeder_file = $this->seeder_path . "/" . $class_name . '.php';
-        
+
         if (preg_match("/_seeder$/", $class_name) && file_exists($seeder_file)) {
             // 生成種子實體
             include_once ($seeder_file);
