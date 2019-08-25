@@ -42,7 +42,7 @@ class CI_Seeder_Controller extends \CI_Controller
         $this->load->database();
 
         // 指定 Seed 路徑
-        $this->seeder_path = __DIR__ . "/../seeders";
+        $this->seeder_path = FCPATH . "application/seeders";
     }
 
     public function index()
