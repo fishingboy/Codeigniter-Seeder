@@ -39,7 +39,7 @@
     
     ```
 5. 進入 command line 專案目錄底下，執行 `php index.php seeder`
-    ```
+    ```shell
     $ php index.php seeder
     seeder (資料填充)
     php index.php seeder                   -- 看指令
@@ -50,7 +50,7 @@
     php index.php seeder run Sample_seeder                     (priority: 100)
     ```
 5. 執行你要的 seeder
-   ```
+   ```shell
    $ php index.php seeder run Log_seeder
    Seed [Sample_seeder] 執行完成，建立 1 筆資料. 
 
