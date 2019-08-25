@@ -5,7 +5,7 @@ namespace fishingboy\ci_seeder;
 /**
  * Seeder
  */
-class Seeder extends CI_Seeder_Controller
+class CI_Seeder_Controller extends CI_Controller
 {
     /**
      * 換行字元
