@@ -49,10 +49,10 @@ class CI_Seeder_Controller extends \CI_Controller
     {
         echo "seeder (資料填充)
 
-php index.php seeder                   -- 看指令
-php index.php seeder run               -- 執行
-php index.php seeder run {seeder_name} -- 執行單一 Seeder
-php index.php seeder ls                -- 看目前 Seeder 的狀態
+php index.php seeder                   -- help 
+php index.php seeder run               -- execute seeder 
+php index.php seeder run {seeder_name} -- execute One Seeder
+php index.php seeder ls                -- check seeder status 
 
 --
 
@@ -69,7 +69,7 @@ php index.php seeder ls                -- 看目前 Seeder 的狀態
         foreach ($seeders as $seeder_obj) {
             $count = $seeder_obj->run();
             $seeder_name = get_class($seeder_obj);
-            echo "Seed [$seeder_name] 執行完成，建立 $count 筆資料. \n";
+            echo "Seed [$seeder_name] complete, carete $count rows. \n";
         }
     }
 
