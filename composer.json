@@ -1,6 +1,9 @@
 {
     "name": "fishingboy/codeigniter-seeder",
     "description": "Codeigniter Seeder",
+    "require": {
+        "php": "^5.3"
+    },
     "keywords": ["codeigniter", "seeder"],
     "license": "Unlicense",
     "authors": [
