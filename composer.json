@@ -1,6 +1,7 @@
 {
     "name": "fishingboy/codeigniter-seeder",
     "description": "Codeigniter Seeder",
+    "keywords": ["codeigniter", "seeder"],
     "license": "Unlicense",
     "authors": [
         {
