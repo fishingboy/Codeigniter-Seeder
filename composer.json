@@ -9,7 +9,7 @@
             "email": "et282523@hotmail.com"
         }
     ],
-    "version": "1.0.6",
+    "version": "1.0.7",
     "autoload": {
         "psr-4": {
             "fishingboy\\ci_seeder\\": "/src"
