@@ -62,3 +62,8 @@ composer require fishingboy/codeigniter-seeder
    Seed [Sample_seeder] 執行完成，建立 1 筆資料. 
 
    ```
+
+## English README
+
+[here](README-zh-tw.md)
+   
