@@ -1,5 +1,10 @@
 # Codeigniter-Seeder
 
+## Language
+
+[en-us](README.md) / 
+[zh-tw](README-zh-tw.md)
+
 ## Installation
 ```
 composer require fishingboy/codeigniter-seeder
@@ -64,7 +69,4 @@ composer require fishingboy/codeigniter-seeder
    Seed [Sample_seeder] complete, carete 1 rows. 
 
    ```
-## Language
-[en-us](README.md) / 
-[zh-tw](README-zh-tw.md)
 

@@ -1,5 +1,10 @@
 # Codeigniter-Seeder
 
+
+## 語言
+[en-us](README.md) / 
+[zh-tw](README-zh-tw.md)
+
 ## 安裝
 ```
 composer require fishingboy/codeigniter-seeder
@@ -62,9 +67,3 @@ composer require fishingboy/codeigniter-seeder
    Seed [Sample_seeder] 執行完成，建立 1 筆資料. 
 
    ```
-
-## 語言
-[en-us](README.md) / 
-[zh-tw](README-zh-tw.md)
-
-   
