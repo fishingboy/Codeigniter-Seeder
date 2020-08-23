@@ -64,6 +64,7 @@ composer require fishingboy/codeigniter-seeder
    Seed [Sample_seeder] complete, carete 1 rows. 
 
    ```
-## 中文版 README
+## Language
+[en-us](README.md) / 
+[zh-tw](README-zh-tw.md)
 
-[請點這裡](README-zh-tw.md)

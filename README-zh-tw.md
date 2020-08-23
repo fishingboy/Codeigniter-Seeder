@@ -63,7 +63,8 @@ composer require fishingboy/codeigniter-seeder
 
    ```
 
-## English README
+## 語言
+[en-us](README.md) / 
+[zh-tw](README-zh-tw.md)
 
-[here](README-zh-tw.md)
    
