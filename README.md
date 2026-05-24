@@ -1,6 +1,7 @@
 # Codeigniter-Seeder
 
 [![Packagist Version](https://img.shields.io/packagist/v/fishingboy/codeigniter-seeder.svg)](https://packagist.org/packages/fishingboy/codeigniter-seeder)
+[![Downloads](https://img.shields.io/packagist/dt/fishingboy/codeigniter-seeder.svg?label=Downloads)](https://packagist.org/packages/fishingboy/codeigniter-seeder)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Language
