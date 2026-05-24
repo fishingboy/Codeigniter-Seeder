@@ -11,6 +11,12 @@
 [en-us](README.md) /
 [zh-tw](README-zh-tw.md)
 
+## 為什麼使用這個套件？
+
+CodeIgniter 預設沒有 Laravel 風格的 database seeder 工作流程。這個套件提供一個小型 seeder controller 與 base class，讓既有 CodeIgniter 專案可以用穩定的 CLI 指令建立開發資料、查詢表、角色、設定與 demo records。
+
+它刻意維持簡單：seed files 是一般 PHP class，資料寫入使用 CodeIgniter 原本的 database layer，導入既有專案時只需要少量設定。
+
 ## 功能特色
 
 - 在既有 CodeIgniter 專案加入資料填充流程，不需要自己寫 runner。
@@ -19,12 +25,6 @@
 - 可從 CLI 列出目前可用 seeders 與 priority。
 - Seeder 內可透過 `$this->CI` 使用原本的 CodeIgniter instance。
 - Browser 存取限制在本機、私有網段或 development 環境。
-
-## 為什麼使用這個套件？
-
-CodeIgniter 預設沒有 Laravel 風格的 database seeder 工作流程。這個套件提供一個小型 seeder controller 與 base class，讓既有 CodeIgniter 專案可以用穩定的 CLI 指令建立開發資料、查詢表、角色、設定與 demo records。
-
-它刻意維持簡單：seed files 是一般 PHP class，資料寫入使用 CodeIgniter 原本的 database layer，導入既有專案時只需要少量設定。
 
 ## 安裝
 

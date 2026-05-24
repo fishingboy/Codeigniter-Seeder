@@ -11,6 +11,12 @@ A small CodeIgniter seeder package for creating repeatable database seed scripts
 [en-us](README.md) /
 [zh-tw](README-zh-tw.md)
 
+## Why This Package?
+
+CodeIgniter does not include a Laravel-style database seeder workflow by default. This package provides a lightweight seeder controller and base class so existing CodeIgniter applications can seed development data, lookup tables, roles, settings, and demo records with predictable CLI commands.
+
+It is intentionally small: seed files are plain PHP classes, database writes use CodeIgniter's existing database layer, and the runner can be added to an existing project with minimal setup.
+
 ## Features
 
 - Add database seeders to a CodeIgniter project without building a custom runner.
@@ -19,12 +25,6 @@ A small CodeIgniter seeder package for creating repeatable database seed scripts
 - List available seeders and their priority from the CLI.
 - Use the normal CodeIgniter instance inside seeders through `$this->CI`.
 - Restrict browser access to local, private network, or development environments.
-
-## Why This Package?
-
-CodeIgniter does not include a Laravel-style database seeder workflow by default. This package provides a lightweight seeder controller and base class so existing CodeIgniter applications can seed development data, lookup tables, roles, settings, and demo records with predictable CLI commands.
-
-It is intentionally small: seed files are plain PHP classes, database writes use CodeIgniter's existing database layer, and the runner can be added to an existing project with minimal setup.
 
 ## Installation
 
