@@ -1,5 +1,7 @@
 # Codeigniter-Seeder
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 ## Language
 
 [en-us](README.md) / 
@@ -69,4 +71,8 @@ composer require fishingboy/codeigniter-seeder
    Seed [Sample_seeder] complete, carete 1 rows. 
 
    ```
+
+## License
+
+Codeigniter-Seeder is open-sourced software licensed under the [MIT license](LICENSE).
 

@@ -1,5 +1,6 @@
 # Codeigniter-Seeder
 
+[![授權: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## 語言
 [en-us](README.md) / 
@@ -67,3 +68,7 @@ composer require fishingboy/codeigniter-seeder
    Seed [Sample_seeder] 執行完成，建立 1 筆資料. 
 
    ```
+
+## 授權
+
+Codeigniter-Seeder 是採用 [MIT 授權](LICENSE) 的開源軟體。
